@@ -34,8 +34,8 @@ class Pokemon
     private $sexe;
 
     /**
-    * @ORM\ManyToMany(targetEntity="Element", cascade={"all"}, mappedBy="pokemons", fetch="EAGER")
-    * @ORM\JoinTable(name="element_pokemon")
+    * @ORM\ManyToMany(targetEntity="Element", cascade={"all"}, inversedBy="pokemons", fetch="EAGER")
+    * @ORM\JoinTable(name="pokemons_elements")
     */
     private $elements;
 
@@ -49,7 +49,7 @@ class Pokemon
 
     public function __construct() 
     {
-        //$this->elements = new ArrayCollection();
+        $this->elements = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**

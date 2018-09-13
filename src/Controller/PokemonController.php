@@ -14,6 +14,8 @@ class PokemonController extends AbstractController
      */
     public function index()
     {
+        $em = $this->getDoctrine()->getManager();
+
         $newPokemon = new Pokemon();
         $newPokemon->setNom('Tortank');
         $newPokemon->setSexe(true);
@@ -23,28 +25,12 @@ class PokemonController extends AbstractController
         $newElement2 = new Element();
         $newElement2->setLibelle('Terre');
 
-        //$newPokemon->setElements(array($newElement, $newElement2));
-        $em = $this->getDoctrine()->getManager();
-        $elementRepository = $em->getRepository(Element::class);
-        
-        //$em->persist($newElement);
-        //$em->persist($newElement2);
-
-        $elementEau = $elementRepository->findOneBy(array("libelle" => 'Eau'));
-        $tabElements = array();
-        array_push($tabElements, $elementEau);
-        $newPokemon->setElements($tabElements);
-        dump($elementEau);
-        //$elementEau->set(array($elementEau));
-        //$em->persist($elementEau->getPokemons());
+        $newPokemon->setElements(array($newElement, $newElement2));
 
         $em->persist($newPokemon);
 
         $em->flush();
 
-        foreach ($elementEau->getPokemons() as $item) {
-            dump($item);
-        }
         $pokemonRepository = $em->getRepository(Pokemon::class);
         $allPkm = $pokemonRepository->findAll();
 

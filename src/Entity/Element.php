@@ -22,17 +22,26 @@ class Element
      */
     private $libelle;
 
+
     /**
-    * @ORM\ManyToMany(targetEntity="Pokemon", cascade={"all"}, inversedBy="elements", fetch="EAGER")
-    * @ORM\JoinTable(name="element_pokemon")
+    * @ORM\ManyToMany(targetEntity="Pokemon", cascade={"all"}, mappedBy="elements", fetch="EAGER")
     */
     private $pokemons;
 
 
 
+
+
+
     //---------------------------------
 
-
+    /**
+     * Element constructor.
+     */
+    public function __construct()
+    {
+        $this->pokemons = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
 
     //---------------------------------
