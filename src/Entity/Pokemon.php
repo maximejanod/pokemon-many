@@ -41,6 +41,7 @@ class Pokemon
 
     /**
     * @ORM\ManyToOne(targetEntity="App\Entity\Dresseur")
+    * @ORM\JoinColumn(name="dresseur_id", referencedColumnName="id")
     */
     private $dresseur;
 
