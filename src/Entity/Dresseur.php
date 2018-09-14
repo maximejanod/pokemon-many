@@ -26,7 +26,77 @@ class Dresseur
      */
     private $nom;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Pokemon", mappedBy="dresseur", fetch="EAGER")
+     */
     private $pokemons;
 
-    private $contact;
+    /**
+     * @ORM\OneToOne(targetEntity="Arene", mappedBy="dresseur", fetch="EAGER")
+     * @ORM\JoinColumn(name="arene_id", referencedColumnName="id")
+     */
+    private $arene;
+
+
+
+
+
+    //------------------------------
+
+
+
+    //------------------------------
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPokemons()
+    {
+        return $this->pokemons;
+    }
+
+    /**
+     * @param mixed $pokemons
+     */
+    public function setPokemons($pokemons)
+    {
+        $this->pokemons = $pokemons;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArene()
+    {
+        return $this->arene;
+    }
+
+    /**
+     * @param mixed $contact
+     */
+    public function setArene($arene)
+    {
+        $this->arene = $arene;
+    }
+
+
+
 }
