@@ -2,12 +2,12 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\Pokemon;
 use App\Entity\Element;
 
-class PokemonController extends AbstractController
+class PokemonController extends Controller
 {
     /**
      * @Route("/pokemon", name="pokemon")
@@ -52,10 +52,16 @@ class PokemonController extends AbstractController
         foreach($allPkm as $pkm) {
             //dump($pkm);
         }
-        
 
         return $this->render('pokemon/index.html.twig', [
             'controller_name' => 'PokemonController',
         ]);
+    }
+
+    /**
+     * @Route("/", name="pokemon")
+     */
+    public function pokemon() {
+        return $this->render('pokemon/pokemon.html.twig');
     }
 }

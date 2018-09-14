@@ -1,1 +1,80 @@
 @import'~bootstrap/scss/bootstrap';
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('build/images/background.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    background: rgb(73, 73, 73);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+a {
+    color: whitesmoke !important;
+    padding: 0 0 0 0 !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+}
+
+a:hover {
+    border-bottom: 1px solid whitesmoke;
+    margin-top: 1px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    width: 130px;
+}
+
+.nav-item:hover {
+    background: rgb(100, 100, 100);
+}
+
+#superBloc {
+    margin-left: 160px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+}
+
+.blocHome {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagrammeBloc {
+    text-align: center;
+}
+
+.titre1Pokemon {
+    font-size: 1.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+}
+
+.titre2Pokemon {
+    font-size: 1.5em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.diagram {
+    width: 100%;
+}

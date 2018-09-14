@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
+<html lang="fr">
+<head>
+    <title>{% block title %}POKEMON-MANY{% endblock %}</title>
+    {% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="UML, initiation diagramme de classe"/>
+    {% endblock %}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+    {% endblock %}
+
+</head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <nav>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">DIAGRAMME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ITEM 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ITEM 3</a>
+                </li>
+            </ul>
+        </nav>
+
+    {% block body %}{% endblock %}
+
+    {% block javascripts %}{% endblock %}
+
     </body>
 </html>
