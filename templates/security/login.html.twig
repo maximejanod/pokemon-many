@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Connexion {% endblock %}
+
+{% block body %}
+<div id="superBloc">
+        <div class="container BlockBlockInscription">
+    
+            <div class="row BlockInscription">
+                <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
+        
+        <div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-6">
+            <h1 class="Connexion">Connexion</h1>
+
+            <form action="{{ path('security_login')}}" method="post">
+                <div class="form-group">
+                    <input placeholder="Adresse email ..." required name="_username" type="text" class="form-control">
+                </div>
+
+                    <div class="form-group">
+                        <input placeholder="Mot de passe ..." required name="_password" type="password" class="form-control">
+                    </div>
+
+                <button type="submit" class="btn btn-success">Connexion</button>
+            </form>
+        </div>
+
+            <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
+
+            </div>
+        </div>
+</div>
+{% endblock %}

@@ -10,6 +10,10 @@ body {
     height: 100%;
 }
 
+* {
+    outline: 0 !important;
+}
+
 nav {
     position: fixed;
     background: rgb(73, 73, 73);
@@ -30,6 +34,18 @@ a {
 a:hover {
     border-bottom: 1px solid whitesmoke;
     margin-top: 1px;
+}
+
+.btn {
+    font-size: 1.2em !important;
+    font-family: Arial !important;
+    letter-spacing: 3px !important;
+}
+
+.btn-success {
+    font-size: 1.2em !important;
+    font-family: Arial !important;
+    letter-spacing: 3px !important;
 }
 
 .nav-item {
@@ -73,4 +89,66 @@ a:hover {
     font-family: Arial;
     letter-spacing: 3px;
     margin-bottom: 40px;
+}
+
+.BlockBlockInscription {
+    height: 100%;
+}
+
+.BlockInscription {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.Inscription {
+    font-size: 1.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+.InscriptionLinkBlock {
+    margin-top: 60px;
+    position: fixed;
+    right: 37px;
+}
+
+.InscriptionLink {
+    font-size: 0.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    color: black !important;
+}
+
+.Connexion {
+    font-size: 1.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+.connexion_deconnexion {
+    position: fixed;
+    width: 100%;
+}
+
+.connexionBtn {
+    float: right;
+    margin-top: 20px;
+    margin-right: 18px;
+}
+
+.connexionBtn:hover {
+    background: none;
+}
+
+.deconnexionBton {
+    float: right;
+    margin-top: 20px;
+    margin-right: 18px;
+}
+
+.deconnexionBton:hover {
+    background: none;
 }
