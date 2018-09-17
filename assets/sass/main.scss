@@ -1,0 +1,154 @@
+@import'~bootstrap/scss/bootstrap';
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('build/images/background.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+* {
+    outline: 0 !important;
+}
+
+nav {
+    position: fixed;
+    background: rgb(73, 73, 73);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+a {
+    color: whitesmoke !important;
+    padding: 0 0 0 0 !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+}
+
+a:hover {
+    border-bottom: 1px solid whitesmoke;
+    margin-top: 1px;
+}
+
+.btn {
+    font-size: 1.2em !important;
+    font-family: Arial !important;
+    letter-spacing: 3px !important;
+}
+
+.btn-success {
+    font-size: 1.2em !important;
+    font-family: Arial !important;
+    letter-spacing: 3px !important;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    width: 130px;
+}
+
+.nav-item:hover {
+    background: rgb(100, 100, 100);
+}
+
+#superBloc {
+    margin-left: 160px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+}
+
+.blocHome {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagrammeBloc {
+    text-align: center;
+}
+
+.titre1Pokemon {
+    font-size: 1.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+}
+
+.titre2Pokemon {
+    font-size: 1.5em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.BlockBlockInscription {
+    height: 100%;
+}
+
+.BlockInscription {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.Inscription {
+    font-size: 1.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+.InscriptionLinkBlock {
+    margin-top: 60px;
+    position: fixed;
+    right: 37px;
+}
+
+.InscriptionLink {
+    font-size: 0.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    color: black !important;
+}
+
+.Connexion {
+    font-size: 1.8em !important;
+    font-family: Arial;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+.connexion_deconnexion {
+    position: fixed;
+    width: 100%;
+}
+
+.connexionBtn {
+    float: right;
+    margin-top: 20px;
+    margin-right: 18px;
+}
+
+.connexionBtn:hover {
+    background: none;
+}
+
+.deconnexionBton {
+    float: right;
+    margin-top: 20px;
+    margin-right: 18px;
+}
+
+.deconnexionBton:hover {
+    background: none;
+}

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Inscription {% endblock %}
+
+{% block body %}
+<div id="superBloc">
+    <div class="container BlockBlockInscription">
+
+        <div class="row BlockInscription">
+            <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
+    
+    <div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-6">
+        <h1 class="Inscription">Inscription</h1>
+
+        {{ form_start(form) }}
+        
+        <div class="form-group">
+            {{ form_row(form.username, {'label': 'Nom', 'attr':{
+                'placeholder': 'Nom ...',
+                'class': 'form-control'
+                }}) 
+            }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.email, {'label': 'Adresse email', 'attr':{
+                'placeholder': 'Adresse email ...',
+                'class': 'form-control'
+                }}) 
+            }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.password, {'label': 'Mot de passe', 'attr':{
+                'placeholder': 'Mot de passe ...',
+                'class': 'form-control'
+                }}) 
+            }}
+            <small id="emailHelp" class="form-text text-muted">» 8 caractères minimum.</small>
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.confirm_password, {'label': 'Confirmation de mot de passe', 'attr':{
+                'placeholder': 'Répétez votre mot de passe ...',
+                'class': 'form-control'
+                }}) 
+            }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Inscription !</button>
+
+        {{ form_end(form) }}
+        
+    </div>
+    
+            <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
