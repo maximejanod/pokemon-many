@@ -15,6 +15,22 @@
 
 </head>
     <body>
+        <ul class="connexion_deconnexion">
+            {% if not app.user %}
+            <li class="nav-item connexionBtn">
+            <a href="{{ path('security_login')}}"><button class="btn btn-success">Connexion</button></a>
+            </li>
+            {% else %}
+            <li class="nav-item deconnexionBton">
+            <a href="{{ path('security_logout')}}"><button class="btn btn-danger">Déconnexion</button></a>
+            </li>
+            {% endif %}
+        </ul>
+
+        <div class="InscriptionLinkBlock">
+            <a class="InscriptionLink" href="{{ path('security_registration') }}">Inscription</a>
+        </div>
+
         <nav>
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -31,7 +47,9 @@
 
     {% block body %}{% endblock %}
 
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('build/js/app.js') }}"></script>
+    {% endblock %}
 
     </body>
 </html>

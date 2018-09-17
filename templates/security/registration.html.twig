@@ -1,36 +1,61 @@
 {% extends 'base.html.twig' %}
 
+{% block title %} Inscription {% endblock %}
+
 {% block body %}
 <div id="superBloc">
-    <div class="container blocHome">
+    <div class="container BlockBlockInscription">
 
-        <div class="row">
-            <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0"></div>
+        <div class="row BlockInscription">
+            <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
     
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 diagrammeBloc">
-                <h1>Inscription</h1>
+    <div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-6">
+        <h1 class="Inscription">Inscription</h1>
 
-                {{ form_start(form) }}
-                
-                <div class="form-group">
-                        <label for="usr">Name</label>
-                        <input type="text" class="form-control" id="usr">
-                </div>
-                
-                {{ form_row(form.username, {'label': 'Nom d\'utilisateur', 'attr':
-                {'placeholder': 'Nom d\'utilisateur ...'}}) }}
-                {{ form_row(form.email, {'label': 'Adresse email', 'attr':
-                {'placeholder': 'Adresse email ...'}}) }}) }}
-                {{ form_row(form.password, {'label': 'Mot de passe', 'attr':
-                {'placeholder': 'Mot de passe !'}}) }}) }}
-                {{ form_row(form.confirm_password, {'label': 'Répétez votre mot de passe', 'attr':
-                {'placeholder': 'Répétez votre mot de passe'}}) }}) }}
-            </div>
+        {{ form_start(form) }}
+        
+        <div class="form-group">
+            {{ form_row(form.username, {'label': 'Nom', 'attr':{
+                'placeholder': 'Nom ...',
+                'class': 'form-control'
+                }}) 
+            }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.email, {'label': 'Adresse email', 'attr':{
+                'placeholder': 'Adresse email ...',
+                'class': 'form-control'
+                }}) 
+            }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.password, {'label': 'Mot de passe', 'attr':{
+                'placeholder': 'Mot de passe ...',
+                'class': 'form-control'
+                }}) 
+            }}
+            <small id="emailHelp" class="form-text text-muted">» 8 caractères minimum.</small>
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.confirm_password, {'label': 'Confirmation de mot de passe', 'attr':{
+                'placeholder': 'Répétez votre mot de passe ...',
+                'class': 'form-control'
+                }}) 
+            }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Inscription !</button>
+
+        {{ form_end(form) }}
+        
+    </div>
     
-            <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0"></div>
+            <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
         </div>
         
     </div>
-
 </div>
 {% endblock %}
